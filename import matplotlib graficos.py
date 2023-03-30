@@ -19,4 +19,3 @@ for nota in notas:
  plt.ylabel('Notas')
  plt.title(nota[0])
  plt.show()
- # imp
