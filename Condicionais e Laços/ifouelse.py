@@ -41,7 +41,7 @@ dados
 # ---------- Depois, insere os veículos 0km dentro de uma nova lista --------- #
 zerokm_y = []
 for lista in dados:
-    if :
+    if (list[2] == True) :
         zerokm_y.append(lista)
 zerokm_y
 
