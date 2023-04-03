@@ -34,3 +34,7 @@ Acessorios
 set(Acessorios) 
 
 list (set(Acessorios))
+# ---------------------------------------------------------------------------- #
+#                              List Compehensions                              #
+# ---------------------------------------------------------------------------- #
+list(set([item for lista in dados for item in lista]))
