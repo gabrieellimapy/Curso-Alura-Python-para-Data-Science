@@ -10,3 +10,8 @@ import numpy as np
 
 # ----------------- Gera um array em tamanho pré determinado ----------------- #
 np.arange(10)
+
+# ------------------------ Importando parte do pacote ------------------------ #
+
+from numpy import arange    
+
