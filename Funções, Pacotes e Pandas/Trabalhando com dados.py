@@ -16,3 +16,5 @@ database.dtypes
 
 database[['Quilometragem', 'Valor']].describe()
 # --------------- Gera um conjunto de estatísticas descritivas --------------- #
+database.info()
+# -------------- Demonstra as informações sobre a base de dados -------------- #
