@@ -37,7 +37,83 @@ valor = 153000
 
 # --------------- Criando uma tupula com valores pré definidos --------------- #
 
-nomes_carros = tuple(['Jetta Variant', 'Passat', 'Crossfox,', 'Dss'])
+nomes_carros = tuple(['Jetta Variant', 'Passat', 'Crossfox,', 'DSS'])
 
 # ----------- Como ver o tipo de um dado no python (retorna tuple) ----------- #
 type(nomes_carros)
+
+
+# ---------------------------------------------------------------------------- #
+#                              Seleções em Tupulas                             #
+# ---------------------------------------------------------------------------- #
+
+nomes_carros = tuple(['Jetta Variant', 'Passat', 'Crossfox,', 'DS5'])
+nomes_carros
+
+# ----------------- Indexação começa em zero igual os arrays ----------------- #
+
+# ----------------------- Para acessar o primeiro item ----------------------- #
+nomes_carros[0]
+# ------------------------------- Segundo Item ------------------------------- #
+nomes_carros[1]
+# ---------------------- Como acessar o último elemento ---------------------- #
+nomes_carros[-1]
+# -------------------------- Como fazer indice slice ------------------------- #
+nomes_carros[1:3]
+# ------------------------- Tupula com tupula dentro ------------------------- #
+nomes_carros = ('Jetta Variant', 'Passat', 'Crossfox', 'DS5', ('Fusca', 'Gol', 'C4'))
+# ----------------------- Acessando itens de uma tupula ---------------------- #
+nomes_carros[-1][0]
+
+# ---------------------------------------------------------------------------- #
+#                             ITERAÇÕES COM TUPULAS                            #
+# ---------------------------------------------------------------------------- #
+
+nomes_carros = ('Jetta Variant', 'Passat', 'Crossfox', 'DS5')
+for item in nomes_carros:
+    print(item)
+# --------- Atribuindo valores de variáveis a tupula respectivamente --------- #
+# -------------------------- Desempacotando tupulas -------------------------- #
+carro_1, carro_2, carro_3, carro_4 = nomes_carros
+carro_1
+# ---------------------------- Out: Jetta Variant ---------------------------- #
+
+# ------ Especificando valores de variáveis conforme sequencia de lista ------ #
+_, A, _, B, = nomes_carros
+A
+
+# ----------------------- Especificando um único valor ----------------------- #
+_, C,*_ = nomes_carros
+C
+
+# ---------------------------------------------------------------------------- #
+#                                     ZIP()                                    #
+# ---------------------------------------------------------------------------- #
+
+# ----------------------- Cria um iterador com tupulas ----------------------- #
+carros = ('Jetta Variant', 'Passat', 'Crossfox', 'DS5')
+carros
+
+valores = [88078.64, 106161.94, 72832.16, 124549.07]
+valores
+
+list(zip(carros, valores))
+
+# --- A iteração junta os valores das túpulas com seus respectivos indices --- #
+
+# -------------------- Out: [('Jetta Variant', 88078.64), -------------------- #
+# -------------------------- ('Passat', 106161.94), -------------------------- #
+# -------------------------- ('Crossfox', 72832.16), ------------------------- #
+# ---------------------------- ('DS5', 124549.07)] --------------------------- #
+
+for item in zip(carros, valores):
+    print(item)
+
+for carro, valor in zip(carros, valores):
+  print(carro, valor)
+  
+# ---------------------- Usando operadores condicionais ---------------------- #
+
+for carro, valor in zip(carros, valores):
+    if (valor >= 100000):
+        print(carro, valor)
