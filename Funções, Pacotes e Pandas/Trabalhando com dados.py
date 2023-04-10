@@ -207,4 +207,4 @@ dados['DS5'] = 124549.07
 
 # ------------------- remove o item de chave do dicionário ------------------- #
 
-
+del dados['Passat']
