@@ -117,3 +117,42 @@ for carro, valor in zip(carros, valores):
 for carro, valor in zip(carros, valores):
     if (valor >= 100000):
         print(carro, valor)
+        
+
+# ---------------------------------------------------------------------------- #
+#                              CRIANDO DICIONÁRIOS                             #
+# ---------------------------------------------------------------------------- #
+
+# ----------------- Listas são coleções sequenciais, isto é, ----------------- #
+# ---------------- os itens destas sequências estão ordenados ---------------- #
+# ------ e utilizam índices (números inteiros) para acessar os valores. ------ #
+# ------------- Os dicionários são coleções um pouco diferentes. ------------- #
+# ------ São estruturas de dados que representam um tipo de mapeamento. ------ #
+# ---- Mapeamentos são coleções de associações entre pares de valores onde --- #
+# ---------- o primeiro elemento do par é conhecido como chave (key) --------- #
+# ---------------------- e o segundo como valor (value). --------------------- #
+
+# ---- dicionario = {key_1: value_1, key_2: value_2, ..., key_n: value_n} ---- #
+
+carros = ['Jetta Variant', 'Passat', 'Crossfox']
+carros
+
+valores = [88078.64, 106161.94, 72832.16]
+valores
+
+carros.index('Passat')
+valores[carros.index('Passat')]
+
+# ----------------- Criar uma estrutura que faz os mapeamentos ---------------- #
+
+dados = {'Jetta Variant': 88078.64, 'Passat': 106161.94, 'Crossfox': 72832.16}
+dados
+
+type(dados)
+
+# ---------------------------------------------------------------------------- #
+#                         Criando dicionários com ZIP()                        #
+# ---------------------------------------------------------------------------- #
+
+list(zip(carros, valores))
+dados = dict(zip(carros, valores)) #Built Function DICT
