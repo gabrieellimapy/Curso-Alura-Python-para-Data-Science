@@ -273,3 +273,63 @@ soma
 list(dados.values())
 
 sum(dados.values())
+
+# ---------------------------------------------------------------------------- #
+#                         FUNÇÕES COM E SEM PARAMETROS                         #
+# ---------------------------------------------------------------------------- #
+
+# ------------------------------ formato padrão ------------------------------ #
+
+# ------------------------------- def <nome>(): ------------------------------ #
+# -------------------------------- <instruções ------------------------------- #
+
+def media():
+    valor = (1 + 2 + 3) / 3
+    print(valor)
+media()
+
+# -------------------------- FUNÇÕES COM PARÂMETROS -------------------------- #
+# ------------------------------ formato padrão ------------------------------ #
+
+#def <nome>(<param1>, <param2>),..., <paramN>):
+#    <instrucoes>
+
+def media (number_1, number_2, number_3):
+    valor = (number_1 + number_2 + number_3) / 3
+    print(valor)
+media(1,2,3)
+
+media(23,45,27)
+
+# ------------------------------ PASSANDO LISTAS ----------------------------- #
+
+def media(lista):
+    valor = sum(list) / len(lista)
+    print(valor)
+media(1, 2, 3, 4)
+
+# ---------------------------------------------------------------------------- #
+#                    DEFININDO FUNÇÕES QUE RETORNAM VALORES                    #
+# ---------------------------------------------------------------------------- #
+
+# ------------------------------ Formato padrão ------------------------------ #
+
+#def <nome> (<param_1>, <param_2>, ..., <param_3):
+# <instruções>
+# return <resultado>
+
+def media (lista):
+   valor = sum(lista) / len(lista)
+   print(valor)
+
+
+
+
+media([1, 2, 3, 4, 5, 6, 7, 8])
+
+def media (lista):
+   valor = sum(lista) / len(lista)
+   print(valor)
+   return (valor, len(lista))
+
+resultado, n = media([1, 2, 3, 4, 5, 6, 7])
