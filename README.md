@@ -14,7 +14,9 @@ Se você, recrutador tiver interesse em oferecer oportunidades, sou totalmente a
 Segue minhas redes sociais abaixo:
 
 Linkedin: https://www.linkedin.com/in/gabriellimadasilva2003/
+
 Instagram: @gabriee_llima
+
 E-mail: gabriel.lima4586@gmail.com
 
 Será um prazer fazer parte de sua equipe!
