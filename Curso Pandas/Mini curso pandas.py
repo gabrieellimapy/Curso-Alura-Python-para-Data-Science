@@ -142,4 +142,69 @@ dataset3.iloc[1:4, [0, 32, 52]]
 
 # -- Retorna um DataFrame com as informações dos carros e colunas filtradas -- #
 
+# ---------------------------------------------------------------------------- #
+#                            Queries com dataframes                            #
+# ---------------------------------------------------------------------------- #
 
+
+dataset3.head()
+
+# --- Fazer uma consulta que traga todos os registro de um determinado tipo -- #
+
+dataset3.Motor
+
+# --------------------------- Query acima de Motor --------------------------- #
+
+select = dataset3.Motor == 'Motor Diesel'
+
+# --------- Retorna uma series boooleana para todos os motores diesel -------- #
+
+type(select)
+dataset3[select]
+
+# --------- Retorna a query onde mostra os carros a diesel e zero km --------- #
+# ----------------------- Também é uma Series Booleana ----------------------- #
+
+dataset[(dataset.Motor == 'Motor Diesel') & (dataset.Zero_km == True)]
+
+# ------------------------- Utilizando o método query ------------------------ #
+
+dataset.query('Motor == "Motor Diesel" and Zero_km == True') 
+
+# ---------------------------------------------------------------------------- #
+#                            Iterando com dataframes                           #
+# ---------------------------------------------------------------------------- #
+
+for item in dataset:
+    print(item)
+    
+list(dataset.iterrows()) #Consegue fazer acessos dentro do dataframe
+
+for  index , row in dataset.iterrows():
+    if(2023 - row["ano"] != 0):
+        dataset.loc[index, 'Km_media'] = row['Quilometragem'] / (2023 - row['Ano'])
+    else:
+        dataset.loc[index, 'Km_media'] = 0
+dataset
+
+# ---------------------------------------------------------------------------- #
+#                              Tratamento de dados                             #
+# ---------------------------------------------------------------------------- #
+
+# ------------------------ VERIFICAR DADOS DO DATASET ------------------------ #
+
+dataset.info()
+
+dataset.Quilometragem.isna() #verifica com uma lista booleana todos os itens que são não Nulos
+
+# ---------------------- Substituir valores Nan por zero --------------------- #
+
+dataset.fillna(0) #Preenche valores nulos com zero
+
+dataset.fillna(0, inplace=True) #Efetiva a alteração
+
+dataset.query("Zero_km" == True)
+
+dataset = pd.read_csv('data/db.csv', sep=';')
+
+dataset.dropna(subset='Quilometragem', inplace='True') #Elimina todos os registros que possuem NA em Quilometragem
